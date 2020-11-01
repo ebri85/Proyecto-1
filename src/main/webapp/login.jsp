@@ -12,8 +12,7 @@
     String usuario;
     String clave;
 
-    usuario = request.getParameter("usrNombrer");
-    clave = request.getParameter("usrClave");
+
 
 %>
 
@@ -36,9 +35,9 @@
             <label>Clave: </label>
             <input type="password" name="usrClave">
         </p>
-
         <input type="submit" name="datos" value="Ingresar">
         <p><a href="registro">Registrarse</a></p>
+
 
     </form>
 

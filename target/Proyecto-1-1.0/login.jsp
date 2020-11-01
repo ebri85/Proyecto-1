@@ -12,8 +12,7 @@
     String usuario;
     String clave;
 
-    usuario = request.getParameter("usrNombrer");
-    clave = request.getParameter("usrClave");
+
 
 %>
 
@@ -27,7 +26,7 @@
     <%@include file="Estructura/_header.jsp" %>
 </header>
 <div class="container">
-    <form action="registro" method="post">
+    <form action="index.jsp" method="get">
         <p class="form">
             <label>Usuario: </label>
             <input type="text" name="usrNombre">
@@ -36,9 +35,33 @@
             <label>Clave: </label>
             <input type="password" name="usrClave">
         </p>
-
         <input type="submit" name="datos" value="Ingresar">
+        <%try{
+
+            usuario = request.getParameter("usrNombre");
+            clave = request.getParameter("usrClave");
+            response.setContentType("text/html");
+            if(usuario.compareTo(usr) == 0 && clave.compareTo(paswd) ==0){
+                response.setContentType("text/html");
+                response.getWriter().write("<p>Revisando esta parte</p>");
+
+
+            } else {
+
+                response.getWriter().write("<p>Error con la autenticacion</p>");
+
+            }
+        }catch (Exception e){
+            out.println("<script>window.alert("+e.getStackTrace()+")</script>");
+        }
+
+        %>
+
+
+
+
         <p><a href="registro">Registrarse</a></p>
+
 
     </form>
 
