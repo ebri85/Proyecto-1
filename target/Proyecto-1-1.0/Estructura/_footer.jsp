@@ -1,7 +1,21 @@
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.Calendar" %>
+<%@ page import="java.util.GregorianCalendar" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <div class="footer">
+    <%
+        Calendar calendar = new GregorianCalendar();
+        int anno = calendar.get(Calendar.YEAR);
+        //out.println("<p>"+anno+"</p>");
 
-    <p>Sitio Desarrollado por Esau Brizuela Ruiz &copy;</p>
+    %>
+
+    <p>&copy; Sitio Desarrollado por Esau Brizuela Ruiz <%=anno%> </p>
+
+
 </div>
+
+<script src="javascript/script.js"></script>
 </html>

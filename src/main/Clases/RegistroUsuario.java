@@ -10,11 +10,21 @@ import java.io.PrintWriter;
 public class RegistroUsuario extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        final String usr = "Admin";
+        final String paswd = "123*456";
+        String usuario;
+        String clave;
 
-        resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
+        usuario = req.getParameter("usrNombre");
+        clave = req.getParameter("usrClave");
 
-        out.println("<h1>Funcionalidad aun no habilitada</h1>");
+        if(usuario.compareTo(usr) == 0 && clave.compareTo(paswd) ==0){
+            resp.sendRedirect("index.jsp");
+
+        } else {
+
+            resp.sendRedirect("index.jsp");
+        }
     }
 }

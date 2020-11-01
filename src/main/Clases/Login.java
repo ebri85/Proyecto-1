@@ -7,6 +7,8 @@ import java.io.IOException;
 public class Login extends HttpServlet {
     String logueo;
 
+
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String datos = getServletInfo().toString();
