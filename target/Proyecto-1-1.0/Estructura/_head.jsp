@@ -6,6 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<style  type="text/css" ></style>
+<script type="text/javascript" rel="javascript/script.js"></script>
     <title>Condominio-|-La Lomita</title>
-</html>

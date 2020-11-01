@@ -33,7 +33,6 @@
 </div>
 <footer>
     <%@include file="Estructura/_footer.jsp" %>
-
 </footer>
 </body>
 </html>

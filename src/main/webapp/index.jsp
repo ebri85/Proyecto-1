@@ -16,6 +16,9 @@
     <%@include file="Estructura/_header.jsp" %>
 
 </header>
+<%
+
+%>
 <div class="container">
     <form action="login" method="post">
         <p class="form">
@@ -33,7 +36,6 @@
 </div>
 <footer>
     <%@include file="Estructura/_footer.jsp" %>
-
 </footer>
 </body>
 </html>
