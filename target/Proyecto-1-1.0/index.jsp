@@ -10,8 +10,6 @@
     if(session.isNew()){
         out.println("<style> nav{display:none;}</style>");
     }
-
-
 %>
 <html>
 

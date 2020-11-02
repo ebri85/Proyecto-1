@@ -11,9 +11,6 @@
     String paswd = "123*456";
     String usuario;
     String clave;
-
-
-
 %>
 
 <html>
@@ -37,11 +34,7 @@
         </p>
         <input type="submit" name="datos" value="Ingresar">
         <p><a href="registro">Registrarse</a></p>
-
-
     </form>
-
-
 </div>
 
 <footer>
