@@ -8,7 +8,7 @@
     <%
         Calendar calendar = new GregorianCalendar();
         int anno = calendar.get(Calendar.YEAR);
-        //out.println("<p>"+anno+"</p>");
+
 
     %>
 

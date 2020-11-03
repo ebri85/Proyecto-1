@@ -17,21 +17,25 @@ public class RegistroUsuario extends HttpServlet {
         final String paswd = "123*456";
         String usuario;
         String clave;
+        boolean _isUsr= false;
+        boolean _isPaswd = false;
 
 
         usuario = req.getParameter("usrNombre");
         clave = req.getParameter("usrClave");
 
-        if(usuario.compareTo(usr) == 0 && clave.compareTo(paswd) ==0){
-            resp.setContentType("text/html");
-            resp.getWriter().write("<p>Revisando esta parte</p>");
+        _isUsr =  usuario.matches(usr);
+        _isPaswd = clave.matches(paswd);
 
-
-            //resp.sendRedirect("index.jsp");
-
-        } else {
+        if(_isUsr==true && _isPaswd == true){
 
             resp.sendRedirect("index.jsp");
+
+        } else {
+            resp.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+            //resp.sendRedirect("index.jsp");
         }
-    }
+     }
+
+
 }

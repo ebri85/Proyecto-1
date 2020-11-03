@@ -11,6 +11,8 @@
     String paswd = "123*456";
     String usuario;
     String clave;
+
+
 %>
 
 <html>
@@ -21,6 +23,7 @@
 <body>
 <header>
     <%@include file="Estructura/_header.jsp" %>
+
 </header>
 <div class="container">
     <form action="registro" method="post">
