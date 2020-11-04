@@ -1,12 +1,13 @@
-const btn = document.getElementById('btIngresar');
+'use strict';
 
+const btn = document.getElementById('btIngresar');
 
 function valida(){
 
     const usr = document.getElementById('usr').value;
     const pass = document.getElementById('pass').value;
     const msg = document.getElementById('msg');
-
+    const cntSesion = document.getElementById('cntSesion');
 
     let patUsr= /Admin/g;
     let patPass= /[123]{3}\*[456]{3}/g;
@@ -15,11 +16,9 @@ function valida(){
     const resultP= patPass.test(pass);
 
     if((resultU)&&(resultP)){
-        msg.innerHTML = "Acceso Correcto, redireccionando...";
-
+        msg.innerText = "Acceso Correcto, redireccionando...";
     } else {
-        msg.innerHTML = "Usuario, constraseña erroneas";
-
+        msg.innerText = "Revisar usuario y contraseña";
     }
 }
 

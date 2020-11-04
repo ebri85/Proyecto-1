@@ -31,14 +31,7 @@ public class ValidaUsuario extends HttpServlet {
 
         if(usuario.equals(usr) && clave.equals(paswd) && usuario !=null){
 
-
-            out.println("<script>window.alert('Usuario correcto')</script>");
-
-            out.println("<h2>Redireccionando...</h2>");
-
-
             resp.sendRedirect("index.jsp");
-
             return;
 
 
@@ -46,9 +39,6 @@ public class ValidaUsuario extends HttpServlet {
 
             session.invalidate();
             resp.sendRedirect("login.jsp");
-
-            //resp.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE);
-            //resp.sendRedirect("index.jsp");
         }
      }
 

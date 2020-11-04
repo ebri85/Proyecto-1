@@ -35,11 +35,11 @@
 
         <p><a href="registro">Registrarse</a></p>
     </form>
-    <p id="msg"><h1></h1></p>
+    <h3><p id="msg"></p></h3>
 </div>
 
 <footer>
-    <script src="javascript/script.js"></script>
+
 
     <%@include file="Estructura/_footer.jsp" %>
 </footer>

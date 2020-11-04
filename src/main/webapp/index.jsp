@@ -36,7 +36,6 @@
 </div>
 
 <footer>
-    <script src="javascript/script.js"></script>
 
     <%@include file="Estructura/_footer.jsp" %>
 </footer>
