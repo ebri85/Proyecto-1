@@ -3,7 +3,7 @@
 <%@ page import="java.util.GregorianCalendar" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<html>
+
 <div class="footer">
     <%
         Calendar calendar = new GregorianCalendar();
@@ -18,4 +18,3 @@
 </div>
 
 <script src="javascript/script.js"></script>
-</html>

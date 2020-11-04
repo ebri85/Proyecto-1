@@ -7,9 +7,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    if(session.isNew()){
-        out.println("<style> nav{display:none;}</style>");
-    }
+     if(session.isNew()){
+            out.println("<style> nav{display:none;}</style>");
+
+     }
 %>
 <html>
 
@@ -30,11 +31,13 @@
     </div>
     <div class="ingreso">
         <h2>Si desea ingresar a las siguientes opciones por favor loguearse</h2>
-        <h3><a href="login.jsp">INGRESAR</a></h3>
+        <h3 id="cntSesion"><a href="login.jsp" >INGRESAR</a></h3>
     </div>
 </div>
 
 <footer>
+    <script src="javascript/script.js"></script>
+
     <%@include file="Estructura/_footer.jsp" %>
 </footer>
 </body>
