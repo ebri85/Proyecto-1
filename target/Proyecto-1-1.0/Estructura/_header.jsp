@@ -5,7 +5,7 @@
         <ul>
             <li><a href="index.jsp">Inicio</a></li>
             <li><a href="registrocondominio.jsp">Registrar Condominio</a></li>
-            <li><a href="registroQueja.jsp.jsp">Registrar Queja</a></li>
+            <li><a href="registroqueja.jsp">Registrar Queja</a></li>
             <li><a href="<%session.invalidate();%>">Salir</a></li>
         </ul>
     </nav>

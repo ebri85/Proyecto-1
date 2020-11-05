@@ -1,10 +1,8 @@
-import java.util.Date;
-
 public class Queja {
     private int numFilialIni;
     private int numFilialDest;
     private String descripcion;
-    private Date fecha;
+    private String fecha;
     private String estado;
     private String observacion;
 
@@ -12,7 +10,7 @@ public class Queja {
 
     }
 
-    public Queja(int numFilialIni, int numFilialDest, String descripcion, Date fecha, String estado, String observacion) {
+    public Queja(int numFilialIni, int numFilialDest, String descripcion, String fecha, String estado, String observacion) {
         this.numFilialIni = numFilialIni;
         this.numFilialDest = numFilialDest;
         this.descripcion = descripcion;
@@ -45,11 +43,11 @@ public class Queja {
         this.descripcion = descripcion;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
@@ -67,6 +65,18 @@ public class Queja {
 
     public void setObservacion(String observacion) {
         this.observacion = observacion;
+    }
+
+    @Override
+    public String toString() {
+        return "Queja{" +
+                "numFilialIni=" + numFilialIni +
+                ", numFilialDest=" + numFilialDest +
+                ", descripcion='" + descripcion + '\'' +
+                ", fecha=" + fecha +
+                ", estado='" + estado + '\'' +
+                ", observacion='" + observacion + '\'' +
+                '}';
     }
 }
 

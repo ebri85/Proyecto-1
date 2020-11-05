@@ -9,12 +9,10 @@ import java.io.PrintWriter;
 @WebServlet(urlPatterns = {"/validacondominio"})
 public class ValidaCondominio extends HttpServlet {
 
-
-
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Condominio condominio = new Condominio();
+
 
         condominio.setCedula(req.getParameter("cedula"));
         condominio.setNombreCompleto(req.getParameter("nombre")) ;
@@ -28,9 +26,11 @@ public class ValidaCondominio extends HttpServlet {
         condominio.setMntFavor(Double.parseDouble(req.getParameter("mntFavor")));
         condominio.setCantVehiculo(Integer.parseInt(req.getParameter("cantVehiculo")));
 
-
+        //req.setAttribute("condos",condominio);
+        resp.sendRedirect("condos");
         resp.getWriter().println("<h1>"+condominio.toString()+"</h1>");
 
 
     }
+
 }
