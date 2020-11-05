@@ -5,14 +5,14 @@ public class Queja {
     private int numFilialDest;
     private String descripcion;
     private Date fecha;
-    private ESTADO estado;
+    private String estado;
     private String observacion;
 
     public Queja(){
 
     }
 
-    public Queja(int numFilialIni, int numFilialDest, String descripcion, Date fecha, ESTADO estado, String observacion) {
+    public Queja(int numFilialIni, int numFilialDest, String descripcion, Date fecha, String estado, String observacion) {
         this.numFilialIni = numFilialIni;
         this.numFilialDest = numFilialDest;
         this.descripcion = descripcion;
@@ -53,11 +53,11 @@ public class Queja {
         this.fecha = fecha;
     }
 
-    public ESTADO getEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setEstado(ESTADO estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 

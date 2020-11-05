@@ -1,10 +1,12 @@
+import java.util.ArrayList;
+
 public class Condominio {
 
-    private int cedula;
+    private String cedula;
     private String nombreCompleto;
-    private int telefono;
-    private String numFilial;
-    private TIPO_FILIAL tipoFilial;
+    private String telefono;
+    private int numFilial;
+    private ArrayList<String> tipoFilial= new ArrayList<String>();
     private boolean moroso;
     private double pendMes;
     private double pendAgua;
@@ -16,7 +18,7 @@ public class Condominio {
     public Condominio() {
     }
 
-    public Condominio(int cedula, String nombreCompleto, int telefono, String numFilial, TIPO_FILIAL tipoFilial, boolean moroso, double pendMes, double pendAgua, double pendAcumMes, double pendAcumAgua, double mntFavor, int cantVehiculo) {
+    public Condominio(String cedula, String nombreCompleto, String telefono, int numFilial, ArrayList<String> tipoFilial, boolean moroso, double pendMes, double pendAgua, double pendAcumMes, double pendAcumAgua, double mntFavor, int cantVehiculo) {
         this.cedula = cedula;
         this.nombreCompleto = nombreCompleto;
         this.telefono = telefono;
@@ -31,11 +33,11 @@ public class Condominio {
         this.cantVehiculo = cantVehiculo;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
 
         this.cedula = cedula;
     }
@@ -48,28 +50,33 @@ public class Condominio {
         this.nombreCompleto = nombreCompleto;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
-    public String getNumFilial() {
+    public int getNumFilial() {
         return numFilial;
     }
 
-    public void setNumFilial(String numFilial) {
+    public void setNumFilial(int numFilial) {
         this.numFilial = numFilial;
     }
 
-    public TIPO_FILIAL getTipoFilial() {
-        return tipoFilial;
+    public String getTipoFilial(String filial) {
+
+        int i=this.tipoFilial.indexOf(filial);
+        String str = this.tipoFilial.get(i);
+
+        return str;
     }
 
-    public void setTipoFilial(TIPO_FILIAL tipoFilial) {
-        this.tipoFilial = tipoFilial;
+    public void setTipoFilial(String tipoFilial) {
+        this.tipoFilial.add(tipoFilial);
+
     }
 
     public boolean isMoroso() {
@@ -126,5 +133,23 @@ public class Condominio {
 
     public void setCantVehiculo(int cantVehiculo) {
         this.cantVehiculo = cantVehiculo;
+    }
+
+    @Override
+    public String toString() {
+        return "Condominio{" +
+                "cedula='" + cedula + '\'' +
+                ", nombreCompleto='" + nombreCompleto + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", numFilial=" + numFilial +
+                ", tipoFilial=" + tipoFilial +
+                ", moroso=" + moroso +
+                ", pendMes=" + pendMes +
+                ", pendAgua=" + pendAgua +
+                ", pendAcumMes=" + pendAcumMes +
+                ", pendAcumAgua=" + pendAcumAgua +
+                ", mntFavor=" + mntFavor +
+                ", cantVehiculo=" + cantVehiculo +
+                '}';
     }
 }

@@ -2,8 +2,6 @@
 
 const btn = document.getElementById('btIngresar');
 
-
-
 function valida(){
 
     const usr = document.getElementById('usr').value;
@@ -19,12 +17,8 @@ function valida(){
 
     if((resultU)&&(resultP)){
         msg.innerText = "Acceso Correcto, redireccionando...";
-
-
-
     } else {
-        msg.innerText = "Usuario, constraseña erroneas";
-
+        msg.innerText = "Revisar usuario y contraseña";
     }
 }
 
