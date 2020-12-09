@@ -1,6 +1,8 @@
+package com.lalomita.clases;
+
 public class Queja {
-    private int numFilialIni;
-    private int numFilialDest;
+    private String numFilialIni;
+    private String numFilialDest;
     private String descripcion;
     private String fecha;
     private String estado;
@@ -10,7 +12,7 @@ public class Queja {
 
     }
 
-    public Queja(int numFilialIni, int numFilialDest, String descripcion, String fecha, String estado, String observacion) {
+    public Queja(String numFilialIni, String numFilialDest, String descripcion, String fecha, String estado, String observacion) {
         this.numFilialIni = numFilialIni;
         this.numFilialDest = numFilialDest;
         this.descripcion = descripcion;
@@ -19,24 +21,24 @@ public class Queja {
         this.observacion = observacion;
     }
 
-    public int getNumFilialIni() {
+    public String getNumFilialIni() {
         return numFilialIni;
     }
 
-    public void setNumFilialIni(int numFilialIni) {
+    public void setNumFilialIni(String numFilialIni) {
         this.numFilialIni = numFilialIni;
     }
 
-    public int getNumFilialDest() {
+    public String getNumFilialDest() {
         return numFilialDest;
     }
 
-    public void setNumFilialDest(int numFilialDest) {
+    public void setNumFilialDest(String numFilialDest) {
         this.numFilialDest = numFilialDest;
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return this.descripcion;
     }
 
     public void setDescripcion(String descripcion) {
@@ -44,7 +46,7 @@ public class Queja {
     }
 
     public String getFecha() {
-        return fecha;
+        return this.fecha;
     }
 
     public void setFecha(String fecha) {
@@ -52,7 +54,7 @@ public class Queja {
     }
 
     public String getEstado() {
-        return estado;
+        return this.estado;
     }
 
     public void setEstado(String estado) {
@@ -60,7 +62,7 @@ public class Queja {
     }
 
     public String getObservacion() {
-        return observacion;
+        return this.observacion;
     }
 
     public void setObservacion(String observacion) {
@@ -69,7 +71,7 @@ public class Queja {
 
     @Override
     public String toString() {
-        return "Queja{" +
+        return "com.lalomita.clases.Queja{" +
                 "numFilialIni=" + numFilialIni +
                 ", numFilialDest=" + numFilialDest +
                 ", descripcion='" + descripcion + '\'' +

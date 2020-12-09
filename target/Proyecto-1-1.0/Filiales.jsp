@@ -1,4 +1,7 @@
-<%--
+<%@ page import="com.lalomita.clases.Condominio" %>
+<%@ page import="java.util.*" %>
+<%@ page import="java.awt.print.PrinterAbortException" %>
+<%@ page import="java.io.PrintWriter" %><%--
   Created by IntelliJ IDEA.
   User: esau.brizuela
   Date: 10/29/2020
@@ -6,12 +9,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-     if(session.isNew()){
-            out.println("<style> nav{display:none;}</style>");
 
-     }
-%>
+
 <html>
 
 <head>
@@ -23,17 +22,20 @@
 </header>
 <div class="inicio">
     <div class="mensaje">
-        <h1>Sistema de Administracion de com.lalomita.clases.Condominio La Lomita</h1>
+        <h1>Sistema de Administracion de La Lomita</h1>
     </div>
     <div class="imagen">
         <img src="imagenes/logo.jpg">
 
     </div>
-    <div class="ingreso">
-        <h2>Si desea ingresar a las siguientes opciones por favor loguearse</h2>
-        <h3 id="cntSesion"><a href="login.jsp" >INGRESAR</a></h3>
-        <input  type="button" onsubmit=""
-    </div>
+
+</div>
+<br>
+
+
+<div class="filiales">
+    <h2>Estas son las filiales registradas de momento</h2>
+    <%@include file="Estructura/_filiales.jsp" %>
 </div>
 
 <footer>

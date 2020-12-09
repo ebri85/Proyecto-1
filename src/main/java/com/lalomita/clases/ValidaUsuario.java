@@ -1,3 +1,5 @@
+package com.lalomita.clases;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,6 +34,7 @@ public class ValidaUsuario extends HttpServlet {
         if(usuario.equals(usr) && clave.equals(paswd) && usuario !=null){
 
             resp.sendRedirect("index.jsp");
+
             return;
 
 

@@ -21,30 +21,30 @@
 </head>
 <body>
 <header>
-
+    <%@include file="Estructura/_header.jsp" %>
 </header>
 <div class="container">
-    <form action="validaqueja" method="post">
-        <p class="form">
+    <form action="listaquejas" method="get">
+
             <label for="numFilialIni">Filial Inicial: </label>
-            <input class="queja" id="numFilialIni" type="text" name="numFilialIni">
-        </p>
-        <p class="form">
+            <input type="text" class="queja" id="numFilialIni"  name="numFilialIni">
+
+
             <label for="numFilialDest" >Filial Destino: </label>
-            <input class="queja" id="numFilialDest"  type="text" name="numFilialDest">
-        </p>
+            <input type="text" class="queja" id="numFilialDest"  name="numFilialDest">
+
 
             <label for="descripcion">Descripcion: </label>
         <textarea class="queja" id="descripcion"  name="descripcion"></textarea>
-        <p class="form">
-            <label for="fecha" >Filial Destino: </label>
-            <input class="queja" id="fecha"  type="date" name="fecha">
-        </p>
 
-        <p class="form">
+            <label for="fecha" >Filial Destino: </label>
+            <input type="date" class="queja" id="fecha"   name="fecha">
+
+
+
         <fieldset>
             <legend>Estado Solicitud</legend>
-            <select name="estado" id="estado">
+            <select name="estado" name="estado" id="estado">
                 <optgroup>
                     <option value="Enviada">Enviada</option>
                     <option value="Proceso">En Proceso</option>
@@ -53,12 +53,12 @@
             </select>
         </fieldset>
 
-        </p>
+
 
                 <label for="observacion">Observacion: </label>
                 <textarea class="queja" id="observacion"  name="observacion"></textarea>
 
-        <input type="submit" id="registraCond" name="condominio" value="Registrar">
+        <input type="submit" id="registraQueja" name="queja" value="Submit">
 
     </form>
 

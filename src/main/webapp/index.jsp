@@ -23,7 +23,7 @@
 </header>
 <div class="inicio">
     <div class="mensaje">
-        <h1>Sistema de Administracion de Condominio La Lomita</h1>
+        <h1>Sistema de Administracion de com.lalomita.clases.Condominio La Lomita</h1>
     </div>
     <div class="imagen">
         <img src="imagenes/logo.jpg">
@@ -32,6 +32,7 @@
     <div class="ingreso">
         <h2>Si desea ingresar a las siguientes opciones por favor loguearse</h2>
         <h3 id="cntSesion"><a href="login.jsp" >INGRESAR</a></h3>
+        <input  type="button" onsubmit=""
     </div>
 </div>
 
